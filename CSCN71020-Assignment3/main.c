@@ -17,22 +17,27 @@ int main(void) {
 
 }
 
-char rockPaperScissors(char array1[], char array2[]) {
+char rockPaperScissors(char* array1, char* array2) {
 
 	char rArray[] = { 0 };
 
 	if (array1 != NULL && array2 != NULL) {
 
-		if ((array1[0] == 'r' && array2[0] == 'p') || (array1 == 'p' && array2[0] == 'r') || (array1[0] == 's' || array2[0] == 'p')) {
+		if ((array1[0] == 'r' && array2[0] == 's') || (array1[0] == 'p' && array2[0] == 'r') || (array1[0] == 's' || array2[0] == 'p')) {
 
 			rArray[0] = '1';
 		}
 
+		if ((array1[0] == 'p' && array2[0] == 's') || (array1[0] == 'r' && array2[0] == 'p') || (array1[0] == 's' || array2[0] == 'r')) {
+
+			rArray[0] = '2';
+		}
 
 		if (array1[0] == array2[0]) {
 
 			rArray[0] = 'd';
 		}
+
 
 	}
 

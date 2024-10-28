@@ -13,24 +13,34 @@ namespace RockPaperScissors
 
 		// title of all tests (WhatIsUnderTest_Condition_ExpectedBehaviour)
 		
-		TEST_METHOD(P1RockP2Paper_PaperBeatsRock_ReturnP1)
+		TEST_METHOD(P1RockP2Paper_PaperBeatsRock_ReturnP2)
 		{
-			char array1[8] = { 'r', 'o', 'c', 'k' };
-			char array2[8] = { 'p', 'a', 'p', 'e', 'r' };
+			char array1[] = { 'r', 'o', 'c', 'k' };
+			char array2[] = { 'p', 'a', 'p', 'e', 'r' };
 			char check = ' ';
 			check = rockPaperScissors(array1, array2);
 
-			Assert::AreEqual('1', check);
+			Assert::AreEqual('2', check);
 		}
 
 		TEST_METHOD(PlayersBothInputRock_InputsEqual_ReturnDraw)
 		{
-			char array1[8] = { 'r', 'o', 'c', 'k' };
-			char array2[8] = { 'r', 'o', 'c', 'k' };
+			char array1[] = { 'r', 'o', 'c', 'k' };
+			char array2[] = { 'r', 'o', 'c', 'k' };
 			char check = ' ';
 			check = rockPaperScissors(array1, array2);
 
 			Assert::AreEqual('d', check);
+		}
+
+		TEST_METHOD(P1PaperP2Rock_RockLosesToPaper_ReturnP2)
+		{
+			char array1[] = { 's', 'c', 'i', 's', 's', 'o', 'r', 's'};
+			char array2[] = { 'p', 'a', 'p', 'e', 'r'};
+			char check = ' ';
+			check = rockPaperScissors(array1, array2);
+
+			Assert::AreEqual('1', check);
 		}
 
 	};
