@@ -43,5 +43,15 @@ namespace RockPaperScissors
 			Assert::AreEqual('1', check);
 		}
 
+		TEST_METHOD(P1FortniteP2Pork_NeitherValid_ReturnInvalid)
+		{
+			char array1[] = { 's', 'c', 'i', 's', 's', 'o', 'r', 's' };
+			char array2[] = { 'p', 'a', 'p', 'e', 'r' };
+			char check = ' ';
+			check = rockPaperScissors(array1, array2);
+
+			Assert::AreEqual('i', check);
+		}
+
 	};
 }
