@@ -28,6 +28,12 @@ char rockPaperScissors(char array1[], char array2[]) {
 			rArray[0] = '1';
 		}
 
+
+		if (array1[0] == array2[0]) {
+
+			rArray[0] = 'd';
+		}
+
 	}
 
 	//else if ()
