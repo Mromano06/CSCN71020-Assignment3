@@ -35,12 +35,12 @@ namespace RockPaperScissors
 
 		TEST_METHOD(P1PaperP2Rock_RockLosesToPaper_ReturnP2)
 		{
-			char array1[] = { 's', 'c', 'i', 's', 's', 'o', 'r', 's'};
-			char array2[] = { 'p', 'a', 'p', 'e', 'r'};
+			char array1[] = { 'p', 'a', 'p', 'e', 'r' };
+			char array2[] = { 's', 'c', 'i', 's', 's', 'o', 'r', 's'};
 			char check = ' ';
 			check = rockPaperScissors(array1, array2);
 
-			Assert::AreEqual('1', check);
+			Assert::AreEqual('2', check);
 		}
 
 		TEST_METHOD(P1FortniteP2Pork_NeitherValid_ReturnInvalid)
