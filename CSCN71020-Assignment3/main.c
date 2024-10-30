@@ -8,10 +8,6 @@
 
 int main(void) {
 
-	char array1[MAX_ARRAY_LENGTH] = { 0 }, array2[MAX_ARRAY_LENGTH] = { 0 };
-
-	//rockPaperScissors(&array1, &array2);
-
 
 	return 0;
 
@@ -26,6 +22,7 @@ char rockPaperScissors(char* array1, char* array2) {
 
 	if (array1 != sArray || array1 != pArray || array1 != rArray || array2 != sArray || array2 != pArray || array2 != rArray) {
 
+		// saves return array as i default and return it if the input is invalid
 		return returnArray[0];
 
 	}
@@ -34,22 +31,23 @@ char rockPaperScissors(char* array1, char* array2) {
 
 			if ((array1[1] == 'r' && array2[0] == 's') || (array1[0] == 'p' && array2[0] == 'r') || (array1[0] == 's' || array2[0] == 'p')) {
 
+				// returns 1 if player 1 wins, checks all conditions
 				returnArray[0] = '1';
 			}
 
 			if ((array1[0] == 'p' && array2[0] == 's') || (array1[0] == 'r' && array2[0] == 'p') || (array1[0] == 's' || array2[0] == 'r')) {
 
+				// returns 2 if player 2 wins, checks all conditions
 				returnArray[0] = '2';
 			}
 
 			if (array1[0] == array2[0]) {
-
+				
+				// returns d if its a draw aka arrays are equal
 				returnArray[0] = 'd';
 			}
 
 	}
-
-	//else if ()
 
 
 	return returnArray[0];
